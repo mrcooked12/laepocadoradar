@@ -1,28 +1,115 @@
-
-<!DOCTYPE html>
+# Guarda esto como generar_html.py y ejecutalo con python3 generar_html.py
+html = '''<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Época Dorada</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Época Dorada - Landing</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #222;
+      color: #fff;
+      padding: 1rem 2rem;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffae00;
+    }
+    section {
+      min-height: 100vh;
+      padding: 100px 2rem 2rem 2rem;
+      background: #fff;
+      margin-bottom: 2rem;
+      border-radius: 6px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    }
+    section:nth-child(even) {
+      background: #f9f9f9;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      color: #222;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>La Época Dorada</h1>
-    <nav>
-      <button onclick="showSection('shooters')">Shooters</button>
-      <button onclick="showSection('terror')">Terror</button>
-      <button onclick="showSection('aventura')">Aventura</button>
-    </nav>
-  </header>
-  <main id="game-section">
-    <!-- Contenido dinámico -->
-  </main>
-  <footer>
-    <p>© La Época Dorada - 2025</p>
-  </footer>
-  <script src="script.js"></script>
+
+<header>
+  <h1>La Época Dorada</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#contenido">Contenido</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <section id="inicio">
+    <h2>Bienvenido a La Época Dorada</h2>
+    <p>Esta es una página de ejemplo que podés usar para subir a GitHub Pages. Acá podés poner la descripción principal de tu proyecto, algo copado, que invite a entrar y conocer más.</p>
+  </section>
+
+  <section id="contenido">
+    <h2>Contenido Principal</h2>
+    <p>Aquí podés mostrar los datos o links que quieras. Si querés agregar imágenes, videos o lo que sea, también va acá. La idea es que cada sección tenga su espacio.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Dejá tu mail o redes sociales para que te contacten. Podés agregar un formulario si querés, pero para arrancar esto va sobrado.</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 La Época Dorada - Todos los derechos reservados</p>
+</footer>
+
 </body>
-</html>
+</html>'''
+
+with open("index.html", "w", encoding="utf-8") as f:
+    f.write(html)
+
+print("Archivo index.html generado. Abrilo en tu navegador o subilo a GitHub.")
